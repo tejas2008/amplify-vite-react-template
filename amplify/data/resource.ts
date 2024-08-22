@@ -11,6 +11,11 @@ const schema = a.schema({
     .model({
       content: a.string(),
       isDone: a.boolean(),
+      gender: a.enum([
+        "SECRET",
+        "MEN",
+        "WOMEN"
+    ]),
     })
     .authorization((allow) => [allow.publicApiKey()]),
 });
